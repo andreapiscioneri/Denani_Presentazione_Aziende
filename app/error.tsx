@@ -3,24 +3,6 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Home, RotateCcw, AlertTriangle } from 'lucide-react'
-import { usePathname } from 'next/navigation'
-
-const translations = {
-  it: {
-    eyebrow: 'Errore imprevisto',
-    title: 'Qualcosa è andato storto',
-    desc: 'Si è verificato un errore inaspettato. Prova a ricaricare la pagina o torna alla home.',
-    retry: 'Riprova',
-    home: 'Torna alla Home',
-  },
-  en: {
-    eyebrow: 'Unexpected error',
-    title: 'Something went wrong',
-    desc: 'An unexpected error occurred. Try reloading the page or go back home.',
-    retry: 'Try again',
-    home: 'Back to Home',
-  },
-}
 
 export default function Error({
   error,
@@ -29,11 +11,6 @@ export default function Error({
   error: Error & { digest?: string }
   reset: () => void
 }) {
-  const pathname = usePathname()
-  const segment = pathname?.split('/')[1] ?? 'it'
-  const locale = segment in translations ? segment : 'it'
-  const t = translations[locale as keyof typeof translations]
-
   useEffect(() => {
     console.error(error)
   }, [error])
@@ -70,7 +47,7 @@ export default function Error({
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <div className="flex justify-center mb-6">
-            <span className="eyebrow">{t.eyebrow}</span>
+            <span className="eyebrow">Errore imprevisto</span>
           </div>
 
           <div className="flex justify-center mb-6">
@@ -86,19 +63,21 @@ export default function Error({
             </div>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4">{t.title}</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Qualcosa è andato storto
+          </h1>
           <p className="text-base max-w-md mx-auto mb-10" style={{ color: 'rgba(255,255,255,0.5)' }}>
-            {t.desc}
+            Si è verificato un errore inaspettato. Prova a ricaricare la pagina o torna alla home.
           </p>
 
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <button onClick={reset} className="btn-primary">
               <RotateCcw size={16} />
-              {t.retry}
+              Riprova
             </button>
             <a href="/" className="btn-ghost">
               <Home size={16} />
-              {t.home}
+              Torna alla Home
             </a>
           </div>
         </motion.div>

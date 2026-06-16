@@ -1,19 +1,10 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
-import '../globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700', '900'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto',
-})
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -70,36 +61,29 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={roboto.variable}>
-      <head>
-        <meta name="theme-color" content="#000000" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Denani',
-              url: 'https://denani.it',
-              logo: 'https://denani.it/logo.png',
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+39-02-1234567',
-                contactType: 'customer service',
-                availableLanguage: ['Italian', 'English'],
-              },
-              sameAs: ['https://www.linkedin.com/company/denani'],
-            }),
-          }}
-        />
-      </head>
-      <body className="bg-black text-white antialiased overflow-x-hidden" style={{ fontFamily: 'Roboto, sans-serif' }}>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Denani',
+            url: 'https://denani.it',
+            logo: 'https://denani.it/logo.png',
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+39-02-1234567',
+              contactType: 'customer service',
+              availableLanguage: ['Italian', 'English'],
+            },
+            sameAs: ['https://www.linkedin.com/company/denani'],
+          }),
+        }}
+      />
+      <Header />
+      <main id="main-content">{children}</main>
+      <Footer />
+    </NextIntlClientProvider>
   )
 }

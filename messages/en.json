@@ -137,6 +137,20 @@
     "phone_label": "+39 02 1234567",
     "email_label": "support@denani.it"
   },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "Page not found",
+    "desc": "The page you're looking for doesn't exist or has been moved.",
+    "home": "Back to Home",
+    "back": "Previous page"
+  },
+  "error": {
+    "eyebrow": "Unexpected error",
+    "title": "Something went wrong",
+    "desc": "An unexpected error occurred. Try reloading the page or go back home.",
+    "retry": "Try again",
+    "home": "Back to Home"
+  },
   "footer": {
     "description": "Strategic partner for digital transformation of companies that want to excel.",
     "nav_title": "Navigation",
