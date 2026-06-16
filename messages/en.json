@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About Us",
+    "contact": "Contact",
+    "cta": "Get Started"
+  },
+  "hero": {
+    "eyebrow": "Premium Enterprise Solution",
+    "title": "We Transform Your Business with Cutting-Edge Technology",
+    "subtitle": "Denani is the strategic partner for companies that want to innovate, grow, and dominate their market.",
+    "cta_primary": "Explore Services",
+    "cta_secondary": "Tell Us About Your Project",
+    "stats": {
+      "clients": "Satisfied Clients",
+      "projects": "Completed Projects",
+      "years": "Years of Experience",
+      "satisfaction": "Satisfaction Rate"
+    }
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Experience and Innovation at Your Company's Service",
+    "subtitle": "We are a team of passionate professionals combining technical expertise and strategic vision to create digital solutions of excellence.",
+    "mission_label": "Our Mission",
+    "mission": "Accelerating company growth through innovative technological solutions, premium design, and data-driven digital strategies.",
+    "vision_label": "Our Vision",
+    "vision": "To be the reference point for companies that want to excel in the digital landscape, creating extraordinary experiences that generate measurable results.",
+    "values": {
+      "title": "Our Values",
+      "innovation": { "title": "Innovation", "desc": "We're always one step ahead, adopting the most advanced technologies." },
+      "excellence": { "title": "Excellence", "desc": "Every project is an opportunity to exceed expectations." },
+      "reliability": { "title": "Reliability", "desc": "We are the partner you can always count on." },
+      "results": { "title": "Results", "desc": "We measure success by the concrete results we generate." }
+    }
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Complete Solutions for Your Digital Growth",
+    "subtitle": "We offer a complete ecosystem of services to accompany your company through every phase of digital transformation.",
+    "items": [
+      { "icon": "Globe", "title": "Web & App Development", "desc": "We build scalable, high-performance digital platforms that are visually stunning and convert visitors into customers." },
+      { "icon": "TrendingUp", "title": "Digital Marketing", "desc": "Data-driven strategies to increase online visibility, generate qualified leads, and maximize ROI." },
+      { "icon": "Cpu", "title": "Artificial Intelligence", "desc": "We integrate cutting-edge AI solutions to automate processes, analyze data, and create competitive advantage." },
+      { "icon": "Shield", "title": "Cybersecurity", "desc": "We protect your business with enterprise-grade information security solutions." },
+      { "icon": "BarChart3", "title": "Business Intelligence", "desc": "We transform business data into strategic insights for faster, more informed decisions." },
+      { "icon": "Palette", "title": "Brand & Design", "desc": "We create premium visual identities that communicate authority and differentiate your brand from the competition." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why Choose Us",
+    "title": "The Competitive Advantage That Makes the Difference",
+    "subtitle": "We are not just service providers. We are the strategic partner that transforms your vision into reality.",
+    "items": [
+      { "title": "Strategic Approach", "desc": "Every project starts with an in-depth analysis of your business, market, and specific objectives." },
+      { "title": "Senior Team", "desc": "Our team consists exclusively of professionals with years of experience in their fields." },
+      { "title": "Premium Technologies", "desc": "We use only the best technologies on the market, ensuring performance, scalability, and longevity." },
+      { "title": "Continuous Support", "desc": "We don't disappear after delivery. We stand by your side with dedicated support and constant updates." },
+      { "title": "Measurable Results", "desc": "Every action is tracked and optimized. We work with clear KPIs and transparent reporting." },
+      { "title": "On-Time Delivery", "desc": "We meet deadlines. Always. Our agile process guarantees certain timelines and consistent quality." }
+    ]
+  },
+  "kpi": {
+    "eyebrow": "Our Numbers",
+    "title": "Results That Speak for Themselves",
+    "subtitle": "Real data from real companies. These are not goals — these are results already achieved.",
+    "items": [
+      { "value": 150, "suffix": "+", "label": "Satisfied Clients" },
+      { "value": 300, "suffix": "+", "label": "Completed Projects" },
+      { "value": 8, "suffix": "", "label": "Years of Experience" },
+      { "value": 98, "suffix": "%", "label": "Satisfaction Rate" }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Projects That Changed the Game",
+    "subtitle": "A selection of our most impactful work.",
+    "all": "All",
+    "filters": ["All", "Web", "App", "Marketing", "AI"],
+    "items": [
+      { "category": "Web", "title": "Premium E-commerce", "desc": "Online sales platform with conversions increased by 340%.", "tag": "Web" },
+      { "category": "App", "title": "B2B Mobile App", "desc": "Enterprise application for sales force management.", "tag": "App" },
+      { "category": "Marketing", "title": "Lead Generation Campaign", "desc": "Multi-channel campaign with 2,800 qualified leads in 90 days.", "tag": "Marketing" },
+      { "category": "AI", "title": "Intelligent Chatbot", "desc": "AI system that autonomously handles 70% of support requests.", "tag": "AI" },
+      { "category": "Web", "title": "Corporate Website", "desc": "Premium corporate site for a multinational industrial company.", "tag": "Web" },
+      { "category": "AI", "title": "Predictive Analytics", "desc": "BI system with sales forecasts at 89% accuracy.", "tag": "AI" }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Clients Say",
+    "subtitle": "Their success is our best reference.",
+    "items": [
+      { "name": "Marco Rossi", "role": "CEO, TechCorp Italia", "text": "Denani completely transformed our digital presence. In 6 months we tripled qualified contacts and our brand is finally recognizable in the industry." },
+      { "name": "Laura Bianchi", "role": "Marketing Director, InnoGroup", "text": "Professionalism, punctuality, and results. Three words that perfectly describe Denani's work. Our campaign ROI increased by 280% in 3 months." },
+      { "name": "Stefano Ferrari", "role": "Founder, StartupVenture", "text": "We had an idea, Denani turned it into an extraordinary digital product. Their ability to translate vision into code is simply impressive." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know to start working with us.",
+    "items": [
+      { "q": "What is the process of working with Denani?", "a": "We always start with a free discovery call to understand your business and goals. Then we develop a personalized proposal with clear timelines, deliverables, and costs. Once approved, production begins with weekly updates." },
+      { "q": "How long does a project take?", "a": "Timelines vary based on complexity. A corporate website takes 3-6 weeks, a mobile app 2-4 months, a marketing campaign starts in 1-2 weeks. We always provide a detailed timeline before starting." },
+      { "q": "How are payments handled?", "a": "We work with milestone payments. Typically 30% on proposal approval, 40% at project midpoint, 30% on final delivery. For recurring projects we offer monthly plans." },
+      { "q": "Do you offer post-delivery support?", "a": "Yes, all projects include a free support period (2-4 weeks). Afterwards we offer monthly maintenance and support plans tailored to your needs." },
+      { "q": "Do you work with companies of any size?", "a": "Yes. We work with startups, SMEs, and large companies. The approach is always personalized to the client's size and budget. Our goal is always maximum value for every euro invested." },
+      { "q": "Are you specialized in any specific sector?", "a": "We have cross-sector experience in many industries: manufacturing, retail, fintech, healthcare, B2B services, e-commerce. This diversity allows us to bring innovative ideas from one sector to another." }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Start Today",
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Talk to one of our experts and discover how Denani can accelerate your digital growth.",
+    "button": "Book a Free Consultation",
+    "secondary": "View Portfolio"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's Talk About Your Project",
+    "subtitle": "Fill out the form and we'll get back to you within 24 hours.",
+    "name": "First Name",
+    "surname": "Last Name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "message_placeholder": "Describe your project or needs...",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! We'll get back to you within 24 hours.",
+    "error": "An error occurred. Please try again or contact us directly.",
+    "address": "Via della Tecnologia 1, Milano",
+    "phone_label": "+39 02 1234567",
+    "email_label": "support@denani.it"
+  },
+  "footer": {
+    "description": "Strategic partner for digital transformation of companies that want to excel.",
+    "nav_title": "Navigation",
+    "services_title": "Services",
+    "contact_title": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy"
+  }
+}

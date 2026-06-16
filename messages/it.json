@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "portfolio": "Portfolio",
+    "about": "Chi Siamo",
+    "contact": "Contatti",
+    "cta": "Inizia Ora"
+  },
+  "hero": {
+    "eyebrow": "Soluzione Enterprise Premium",
+    "title": "Trasformiamo il tuo Business con Tecnologia d'Avanguardia",
+    "subtitle": "Denani è il partner strategico per aziende che vogliono innovare, crescere e dominare il proprio mercato.",
+    "cta_primary": "Scopri i Servizi",
+    "cta_secondary": "Parlaci del tuo Progetto",
+    "stats": {
+      "clients": "Clienti Soddisfatti",
+      "projects": "Progetti Completati",
+      "years": "Anni di Esperienza",
+      "satisfaction": "Soddisfazione"
+    }
+  },
+  "about": {
+    "eyebrow": "Chi Siamo",
+    "title": "Esperienza e Innovazione al Servizio della Tua Azienda",
+    "subtitle": "Siamo un team di professionisti appassionati che combinano expertise tecnica e visione strategica per creare soluzioni digitali di eccellenza.",
+    "mission_label": "La Nostra Missione",
+    "mission": "Accelerare la crescita delle aziende attraverso soluzioni tecnologiche innovative, design premium e strategie digitali data-driven.",
+    "vision_label": "La Nostra Visione",
+    "vision": "Essere il punto di riferimento per le aziende che vogliono eccellere nel panorama digitale, creando esperienze straordinarie che generano risultati misurabili.",
+    "values": {
+      "title": "I Nostri Valori",
+      "innovation": { "title": "Innovazione", "desc": "Siamo sempre un passo avanti, adottando le tecnologie più avanzate." },
+      "excellence": { "title": "Eccellenza", "desc": "Ogni progetto è un'opportunità per superare le aspettative." },
+      "reliability": { "title": "Affidabilità", "desc": "Siamo il partner su cui puoi sempre contare." },
+      "results": { "title": "Risultati", "desc": "Misuriamo il successo dai risultati concreti che generiamo." }
+    }
+  },
+  "services": {
+    "eyebrow": "I Nostri Servizi",
+    "title": "Soluzioni Complete per la Tua Crescita Digitale",
+    "subtitle": "Offriamo un ecosistema completo di servizi per accompagnare la tua azienda in ogni fase della trasformazione digitale.",
+    "items": [
+      { "icon": "Globe", "title": "Sviluppo Web & App", "desc": "Realizziamo piattaforme digitali scalabili, performanti e visivamente straordinarie che convertono visitatori in clienti." },
+      { "icon": "TrendingUp", "title": "Marketing Digitale", "desc": "Strategie data-driven per aumentare la visibilità online, generare lead qualificati e massimizzare il ROI." },
+      { "icon": "Cpu", "title": "Intelligenza Artificiale", "desc": "Integriamo soluzioni AI all'avanguardia per automatizzare processi, analizzare dati e creare vantaggio competitivo." },
+      { "icon": "Shield", "title": "Cybersecurity", "desc": "Proteggiamo il tuo business con soluzioni di sicurezza informatica enterprise-grade." },
+      { "icon": "BarChart3", "title": "Business Intelligence", "desc": "Trasformiamo i dati aziendali in insight strategici per decisioni più rapide e informate." },
+      { "icon": "Palette", "title": "Brand & Design", "desc": "Creiamo identità visive premium che comunicano autorevolezza e differenziano il tuo brand dalla concorrenza." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Perché Sceglierci",
+    "title": "Il Vantaggio Competitivo che fa la Differenza",
+    "subtitle": "Non siamo solo fornitori di servizi. Siamo il partner strategico che trasforma la tua visione in realtà.",
+    "items": [
+      { "title": "Approccio Strategico", "desc": "Ogni progetto parte da un'analisi profonda del tuo business, del mercato e dei tuoi obiettivi specifici." },
+      { "title": "Team Senior", "desc": "Il nostro team è composto esclusivamente da professionisti con anni di esperienza nei loro settori." },
+      { "title": "Tecnologie Premium", "desc": "Utilizziamo solo le migliori tecnologie del mercato, garantendo prestazioni, scalabilità e longevità." },
+      { "title": "Supporto Continuo", "desc": "Non scompariamo dopo la consegna. Siamo al tuo fianco con supporto dedicato e aggiornamenti costanti." },
+      { "title": "Risultati Misurabili", "desc": "Ogni azione è tracciata e ottimizzata. Lavoriamo con KPI chiari e reportistica trasparente." },
+      { "title": "Consegna Puntuale", "desc": "Rispettiamo le scadenze. Sempre. Il nostro processo agile garantisce tempi certi e qualità costante." }
+    ]
+  },
+  "kpi": {
+    "eyebrow": "I Nostri Numeri",
+    "title": "Risultati che Parlano da Soli",
+    "subtitle": "Dati reali di aziende reali. Questi non sono obiettivi, sono risultati già raggiunti.",
+    "items": [
+      { "value": 150, "suffix": "+", "label": "Clienti Soddisfatti" },
+      { "value": 300, "suffix": "+", "label": "Progetti Completati" },
+      { "value": 8, "suffix": "", "label": "Anni di Esperienza" },
+      { "value": 98, "suffix": "%", "label": "Tasso di Soddisfazione" }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Progetti che Hanno Cambiato le Regole del Gioco",
+    "subtitle": "Una selezione dei nostri lavori più impattanti.",
+    "all": "Tutti",
+    "filters": ["Tutti", "Web", "App", "Marketing", "AI"],
+    "items": [
+      { "category": "Web", "title": "E-commerce Premium", "desc": "Piattaforma di vendita online con conversioni aumentate del 340%.", "tag": "Web" },
+      { "category": "App", "title": "App Mobile B2B", "desc": "Applicazione enterprise per la gestione della forza vendita.", "tag": "App" },
+      { "category": "Marketing", "title": "Campagna Lead Generation", "desc": "Campagna multicanale con 2.800 lead qualificati in 90 giorni.", "tag": "Marketing" },
+      { "category": "AI", "title": "Chatbot Intelligente", "desc": "Sistema AI che gestisce il 70% delle richieste di supporto autonomamente.", "tag": "AI" },
+      { "category": "Web", "title": "Corporate Website", "desc": "Sito corporate premium per multinazionale del settore industriale.", "tag": "Web" },
+      { "category": "AI", "title": "Analisi Predittiva", "desc": "Sistema di BI con previsioni di vendita con 89% di accuratezza.", "tag": "AI" }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonianze",
+    "title": "Cosa Dicono i Nostri Clienti",
+    "subtitle": "Il loro successo è la nostra migliore referenza.",
+    "items": [
+      { "name": "Marco Rossi", "role": "CEO, TechCorp Italia", "text": "Denani ha trasformato completamente la nostra presenza digitale. In 6 mesi abbiamo triplicato i contatti qualificati e il nostro brand è finalmente riconoscibile nel settore." },
+      { "name": "Laura Bianchi", "role": "Marketing Director, InnoGroup", "text": "Professionalità, puntualità e risultati. Tre parole che descrivono perfettamente il lavoro di Denani. Il ROI delle nostre campagne è aumentato del 280% in 3 mesi." },
+      { "name": "Stefano Ferrari", "role": "Founder, StartupVenture", "text": "Avevamo un'idea, Denani l'ha trasformata in un prodotto digitale straordinario. La loro capacità di tradurre la visione in codice è semplicemente impressionante." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Domande Frequenti",
+    "subtitle": "Tutto quello che devi sapere per iniziare a lavorare con noi.",
+    "items": [
+      { "q": "Qual è il processo di lavoro con Denani?", "a": "Iniziamo sempre con un call di discovery gratuito per comprendere il tuo business e i tuoi obiettivi. Poi elaboriamo una proposta personalizzata con timeline, deliverable e costi chiari. Una volta approvata, inizia la produzione con aggiornamenti settimanali." },
+      { "q": "Quanto tempo richiede la realizzazione di un progetto?", "a": "I tempi variano in base alla complessità. Un sito web corporate richiede 3-6 settimane, un'app mobile 2-4 mesi, una campagna marketing parte in 1-2 settimane. Fornissimo sempre una timeline dettagliata prima di iniziare." },
+      { "q": "Come vengono gestiti i pagamenti?", "a": "Lavoriamo con pagamenti a milestone. Tipicamente 30% all'approvazione della proposta, 40% a metà progetto, 30% alla consegna finale. Per progetti ricorrenti offriamo piani mensili." },
+      { "q": "Offrite supporto post-consegna?", "a": "Sì, tutti i progetti includono un periodo di supporto gratuito (2-4 settimane). Successivamente offriamo piani di manutenzione e supporto mensili calibrati sulle tue esigenze." },
+      { "q": "Lavorate con aziende di qualsiasi dimensione?", "a": "Sì. Lavoriamo con startup, PMI e grandi aziende. L'approccio è sempre personalizzato alle dimensioni e al budget del cliente. Il nostro obiettivo è sempre il massimo valore per ogni euro investito." },
+      { "q": "Siete specializzati in qualche settore specifico?", "a": "Abbiamo esperienza trasversale in molti settori: manifatturiero, retail, fintech, healthcare, B2B services, e-commerce. Questa diversità ci permette di portare idee innovative da un settore all'altro." }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Inizia Oggi",
+    "title": "Pronto a Trasformare il tuo Business?",
+    "subtitle": "Parla con un nostro esperto e scopri come Denani può accelerare la tua crescita digitale.",
+    "button": "Prenota una Consulenza Gratuita",
+    "secondary": "Guarda il Portfolio"
+  },
+  "contact": {
+    "eyebrow": "Contatti",
+    "title": "Parliamo del tuo Progetto",
+    "subtitle": "Compila il form e ti risponderemo entro 24 ore.",
+    "name": "Nome",
+    "surname": "Cognome",
+    "company": "Azienda",
+    "email": "Email",
+    "phone": "Telefono",
+    "message": "Messaggio",
+    "message_placeholder": "Descrivici il tuo progetto o le tue esigenze...",
+    "submit": "Invia Messaggio",
+    "sending": "Invio in corso...",
+    "success": "Messaggio inviato con successo! Ti risponderemo entro 24 ore.",
+    "error": "Si è verificato un errore. Riprova o contattaci direttamente.",
+    "address": "Via della Tecnologia 1, Milano",
+    "phone_label": "+39 02 1234567",
+    "email_label": "support@denani.it"
+  },
+  "footer": {
+    "description": "Partner strategico per la trasformazione digitale delle aziende che vogliono eccellere.",
+    "nav_title": "Navigazione",
+    "services_title": "Servizi",
+    "contact_title": "Contatti",
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy"
+  }
+}
