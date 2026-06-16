@@ -121,7 +121,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Let's Talk About Your Project",
-    "subtitle": "Fill out the form and we'll get back to you within 24 hours.",
+    "subtitle": "Fill out the form and we'll get back to you within 48 hours.",
     "name": "First Name",
     "surname": "Last Name",
     "company": "Company",
@@ -131,7 +131,7 @@
     "message_placeholder": "Describe your project or needs...",
     "submit": "Send Message",
     "sending": "Sending...",
-    "success": "Message sent successfully! We'll get back to you within 24 hours.",
+    "success": "Message sent successfully! We'll get back to you within 48 hours.",
     "error": "An error occurred. Please try again or contact us directly.",
     "address": "Via della Tecnologia 1, Milano",
     "phone_label": "+39 02 1234567",

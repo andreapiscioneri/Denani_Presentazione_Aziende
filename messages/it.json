@@ -121,7 +121,7 @@
   "contact": {
     "eyebrow": "Contatti",
     "title": "Parliamo del tuo Progetto",
-    "subtitle": "Compila il form e ti risponderemo entro 24 ore.",
+    "subtitle": "Compila il form e ti risponderemo entro 48 ore.",
     "name": "Nome",
     "surname": "Cognome",
     "company": "Azienda",
@@ -131,7 +131,7 @@
     "message_placeholder": "Descrivici il tuo progetto o le tue esigenze...",
     "submit": "Invia Messaggio",
     "sending": "Invio in corso...",
-    "success": "Messaggio inviato con successo! Ti risponderemo entro 24 ore.",
+    "success": "Messaggio inviato con successo! Ti risponderemo entro 48 ore.",
     "error": "Si è verificato un errore. Riprova o contattaci direttamente.",
     "address": "Via della Tecnologia 1, Milano",
     "phone_label": "+39 02 1234567",

@@ -1,11 +1,17 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+
+const LANGUAGES = [
+  { code: 'it', label: 'Italiano', flag: '/flag-it.svg' },
+  { code: 'en', label: 'English', flag: '/flag-en.svg' },
+] as const
 
 export default function Header() {
   const t = useTranslations('nav')
@@ -14,6 +20,8 @@ export default function Header() {
   const router = useRouter()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const langRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -21,11 +29,24 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const onClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', onClickOutside)
+    return () => document.removeEventListener('mousedown', onClickOutside)
+  }, [])
+
   const switchLocale = (newLocale: string) => {
     const segments = pathname.split('/')
     segments[1] = newLocale
     router.push(segments.join('/'))
+    setLangOpen(false)
   }
+
+  const currentLang = LANGUAGES.find((l) => l.code === locale) ?? LANGUAGES[0]
 
   const navLinks = [
     { href: '#about', label: t('about') },
@@ -43,12 +64,14 @@ export default function Header() {
       <div className="container-x flex items-center justify-between">
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center gap-2 group" aria-label="Denani Home">
-          <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center" style={{ backgroundColor: '#6EF0CC' }}>
-            <span className="text-black font-black text-sm">D</span>
-          </div>
-          <span className="font-bold text-white text-lg tracking-tight group-hover:text-accent transition-colors" style={{ '--tw-text-opacity': '1' } as React.CSSProperties}>
-            Denani
-          </span>
+          <Image
+            src="/Denani SRL.webp"
+            alt="Denani SRL"
+            width={120}
+            height={36}
+            className="h-9 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -67,23 +90,56 @@ export default function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-4">
-          {/* Language Switcher */}
-          <div className="flex items-center gap-1 glass rounded-full px-2 py-1">
-            {(['it', 'en'] as const).map((lang) => (
-              <button
-                key={lang}
-                onClick={() => switchLocale(lang)}
-                className="flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200"
-                style={{
-                  background: locale === lang ? '#6EF0CC' : 'transparent',
-                  color: locale === lang ? '#000' : 'rgba(255,255,255,0.6)',
-                }}
-                aria-label={lang === 'it' ? 'Italiano' : 'English'}
-              >
-                <span>{lang === 'it' ? '🇮🇹' : '🇬🇧'}</span>
-                <span className="hidden sm:inline">{lang.toUpperCase()}</span>
-              </button>
-            ))}
+          {/* Language Switcher Dropdown */}
+          <div className="relative" ref={langRef}>
+            <button
+              onClick={() => setLangOpen((o) => !o)}
+              className="flex items-center gap-1.5 glass rounded-full px-3 py-1.5 text-xs font-medium text-white/70 hover:text-white transition-all duration-200 group"
+              aria-label="Select language"
+              aria-expanded={langOpen}
+              aria-haspopup="listbox"
+            >
+              <Image src={currentLang.flag} alt={currentLang.label} width={16} height={12} className="rounded-[2px] object-cover" />
+              <span className="hidden sm:inline">{currentLang.code.toUpperCase()}</span>
+              <ChevronDown
+                size={11}
+                className={`opacity-50 transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+
+            <AnimatePresence>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -6, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -6, scale: 0.96 }}
+                  transition={{ duration: 0.15, ease: 'easeOut' }}
+                  className="absolute right-0 mt-2 w-36 glass border border-white/10 rounded-xl shadow-xl overflow-hidden"
+                  role="listbox"
+                  aria-label="Language options"
+                >
+                  {LANGUAGES.map((lang) => (
+                    <button
+                      key={lang.code}
+                      role="option"
+                      aria-selected={locale === lang.code}
+                      onClick={() => switchLocale(lang.code)}
+                      className="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs font-medium transition-all duration-150"
+                      style={{
+                        background: locale === lang.code ? 'rgba(110,240,204,0.12)' : 'transparent',
+                        color: locale === lang.code ? '#6EF0CC' : 'rgba(255,255,255,0.65)',
+                      }}
+                    >
+                      <Image src={lang.flag} alt={lang.label} width={18} height={13} className="rounded-[2px] object-cover flex-shrink-0" />
+                      <span>{lang.label}</span>
+                      {locale === lang.code && (
+                        <span className="ml-auto w-1.5 h-1.5 rounded-full" style={{ background: '#6EF0CC' }} />
+                      )}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* CTA */}

@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
-import { Send, MapPin, Phone, Mail, CheckCircle, AlertCircle } from 'lucide-react'
+import { Send, MapPin, Mail, CheckCircle, AlertCircle } from 'lucide-react'
 import SectionTitle from '@/components/SectionTitle'
 
 const schema = z.object({
@@ -85,30 +85,52 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="glass rounded-2xl p-8 space-y-6">
-              {[
-                { icon: MapPin, label: t('address'), href: undefined },
-                { icon: Phone, label: t('phone_label'), href: 'tel:+390212345678' },
-                { icon: Mail, label: t('email_label'), href: 'mailto:support@denani.it' },
-              ].map(({ icon: Icon, label, href }) => (
-                <div key={label} className="flex items-center gap-4">
-                  <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{
-                      background: 'rgba(110,240,204,0.1)',
-                      border: '1px solid rgba(110,240,204,0.2)',
-                    }}
-                  >
-                    <Icon size={18} style={{ color: '#6EF0CC' }} />
-                  </div>
-                  {href ? (
-                    <a href={href} className="text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                      {label}
-                    </a>
-                  ) : (
-                    <span className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>{label}</span>
-                  )}
+              {/* Sede legale */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(110,240,204,0.1)', border: '1px solid rgba(110,240,204,0.2)' }}
+                >
+                  <MapPin size={18} style={{ color: '#6EF0CC' }} />
                 </div>
-              ))}
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#6EF0CC' }}>
+                    Sede legale
+                  </p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>Via Camozzi 1/C</p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>24027 Nembro (BG)</p>
+                </div>
+              </div>
+
+              {/* Sede operativa */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(110,240,204,0.1)', border: '1px solid rgba(110,240,204,0.2)' }}
+                >
+                  <MapPin size={18} style={{ color: '#6EF0CC' }} />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#6EF0CC' }}>
+                    Sede operativa
+                  </p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>Via Galimberti 6A</p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>24124 Bergamo</p>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-4">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(110,240,204,0.1)', border: '1px solid rgba(110,240,204,0.2)' }}
+                >
+                  <Mail size={18} style={{ color: '#6EF0CC' }} />
+                </div>
+                <a href="mailto:support@denani.it" className="text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  support@denani.it
+                </a>
+              </div>
             </div>
           </motion.div>
 

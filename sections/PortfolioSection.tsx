@@ -3,7 +3,28 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Globe, Smartphone, TrendingUp, Brain, Code, type LucideIcon } from 'lucide-react'
+
+const CATEGORY_ICONS: Record<string, LucideIcon> = {
+  Web: Globe,
+  App: Smartphone,
+  Marketing: TrendingUp,
+  AI: Brain,
+}
+
+const CATEGORY_COLORS: Record<string, string> = {
+  Web: 'rgba(110,240,204,0.15)',
+  App: 'rgba(99,179,237,0.15)',
+  Marketing: 'rgba(246,173,85,0.15)',
+  AI: 'rgba(183,148,244,0.15)',
+}
+
+const CATEGORY_ICON_COLORS: Record<string, string> = {
+  Web: '#6EF0CC',
+  App: '#63B3ED',
+  Marketing: '#F6AD55',
+  AI: '#B794F4',
+}
 import SectionTitle from '@/components/SectionTitle'
 
 export default function PortfolioSection() {
@@ -45,40 +66,50 @@ export default function PortfolioSection() {
         <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <AnimatePresence mode="popLayout">
             {filtered.map((item, i) => (
-              <motion.article
+              <motion.a
                 key={item.title}
                 layout
+                href="https://www.denani.it"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="glass rounded-2xl overflow-hidden group"
-                style={{ cursor: 'pointer' }}
+                className="glass rounded-2xl overflow-hidden group block"
                 whileHover={{ y: -4 }}
               >
-                {/* Placeholder image area */}
-                <div
-                  className="h-48 relative overflow-hidden"
-                  style={{ background: 'linear-gradient(135deg, rgba(110,240,204,0.1), transparent)' }}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-black" style={{ fontSize: '6rem', color: 'rgba(110,240,204,0.1)' }}>
-                      {item.tag[0]}
-                    </span>
-                  </div>
-                  <div className="absolute top-3 right-3">
-                    <span
-                      className="px-3 py-1 rounded-full text-xs font-medium"
-                      style={{
-                        background: 'rgba(110,240,204,0.2)',
-                        border: '1px solid rgba(110,240,204,0.3)',
-                        color: '#6EF0CC',
-                      }}
+                {/* Icon area */}
+                {(() => {
+                  const Icon = CATEGORY_ICONS[item.tag] ?? Code
+                  const bg = CATEGORY_COLORS[item.tag] ?? 'rgba(110,240,204,0.1)'
+                  const iconColor = CATEGORY_ICON_COLORS[item.tag] ?? '#6EF0CC'
+                  return (
+                    <div
+                      className="h-44 relative overflow-hidden flex items-center justify-center"
+                      style={{ background: bg }}
                     >
-                      {item.tag}
-                    </span>
-                  </div>
-                </div>
+                      <Icon
+                        size={64}
+                        strokeWidth={1}
+                        style={{ color: iconColor, opacity: 0.7 }}
+                        className="transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute top-3 right-3">
+                        <span
+                          className="px-3 py-1 rounded-full text-xs font-medium"
+                          style={{
+                            background: `${iconColor}22`,
+                            border: `1px solid ${iconColor}44`,
+                            color: iconColor,
+                          }}
+                        >
+                          {item.tag}
+                        </span>
+                      </div>
+                    </div>
+                  )
+                })()}
                 <div className="p-6">
                   <h3 className="font-bold text-white mb-2 flex items-center justify-between">
                     {item.title}
@@ -88,7 +119,7 @@ export default function PortfolioSection() {
                     {item.desc}
                   </p>
                 </div>
-              </motion.article>
+              </motion.a>
             ))}
           </AnimatePresence>
         </motion.div>

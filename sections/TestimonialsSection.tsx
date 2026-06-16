@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
@@ -10,6 +10,11 @@ export default function TestimonialsSection() {
   const t = useTranslations('testimonials')
   const items = t.raw('items') as Array<{ name: string; role: string; text: string }>
   const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => setCurrent((c) => (c + 1) % items.length), 4000)
+    return () => clearInterval(timer)
+  }, [items.length])
 
   return (
     <section id="testimonials" className="section-pad relative overflow-hidden">

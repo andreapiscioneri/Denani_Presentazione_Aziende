@@ -72,7 +72,6 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={roboto.variable}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
         <script
           type="application/ld+json"
